@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Success</title>
+  </head>
+  <body>
+      <div class="message">
+          <h3>The email address you entered {{ email }} is a VALID email address! Thank you! </h3>
+      </div>
+      <h1>Email Addresses Entered:</h1>
+      {% for email in all_email %}
+      <tr>
+          <td>{{ email['email'] }} {{ email['created_at'] }}</td><br>
+      {% endfor %}
+      <a href="/">GO BACK</a>
+  </body>
+</html>
